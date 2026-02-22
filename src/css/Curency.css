@@ -1,0 +1,129 @@
+.page-background {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(135deg, #071029 0%, #00111a 60%, #020617 100%);
+    color: #e6eef8;
+}
+
+.curency-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.curency-title {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: #e6f7ff;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.select-row {
+    display: flex;
+    gap: 12px;
+}
+
+.convert-btn {
+    width: 100%;
+    padding: 10px 14px;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.18);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+.convert-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.22);
+}
+
+.result[readonly] {
+    background: rgba(255, 255, 255, 0.02);
+    color: #dbeafe;
+}
+
+.curency-div {
+    width: 380px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.3s ease;
+}
+
+/* Hover Card Effect */
+.curency-div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Input Fields */
+.amount,
+.result {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020617;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.2s ease;
+}
+
+/* Select Dropdown */
+.from-curency-option {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020617;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Focus Effects */
+.amount:focus,
+.result:focus,
+.from-curency-option:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+/* Hover Effects */
+.amount:hover,
+.result:hover,
+.from-curency-option:hover {
+    background: #020617;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 420px) {
+    .curency-div {
+        width: 90%;
+    }
+}
